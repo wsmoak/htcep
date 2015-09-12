@@ -40,13 +40,13 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-			  <section>
+        <section>
           <h1>How To Contribute</h1>
-					<h3>to Elixir and Phoenix</h3>
-					<p>
-						<small><a href="http://wsmoak.net">Wendy Smoak</a> / <a href="http://twitter.com/wsmoak">@wsmoak</a></small>
-					</p>
-				</section>
+				  <h3>to Elixir and Phoenix</h3>
+				  <p>
+				  	<small><a href="http://wsmoak.net">Wendy Smoak</a> / <a href="http://twitter.com/wsmoak">@wsmoak</a></small>
+				  </p>
+			  </section>
 
         <section>
   				<section>
@@ -93,7 +93,7 @@
   				<p class="fragment" style="text-align: left;">Mailing Lists</p>
 	  			<p class="fragment">(Google Groups)</p>
 					<p class="fragment" style="text-align: right;">Slack</p>
- 					<h2>Questions</h2>
+ 					<h2>Ask Questions</h2>
   				<p class="fragment" style="text-align: left;">Stack Overflow</p>
 	  			<p class="fragment">Reddit</p>
 	  			<p class="fragment" style="text-align: right;">IRC</p>
@@ -172,6 +172,51 @@
             <h2>Hack on Phoenix</h2>
           </section>
           <section>
+            <h2>Use master</h2>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ git clone https://github.com/phoenixframework/phoenix.git
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+Cloning into 'phoenix'...
+remote: Counting objects: 19702, done.
+remote: Compressing objects: 100% (49/49), done.
+remote: Total 19702 (delta 13), reused 0 (delta 0), pack-reused 19649
+Receiving objects: 100% (19702/19702), 3.65 MiB | 636.00 KiB/s, done.
+Resolving deltas: 100% (12877/12877), done.
+Checking connectivity... done.
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ cd phoenix/installer
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ rm ~/.mix/archives/phoenix_new*
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ mix phoenix.new test_project --dev
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+            </code></pre>
+          </section>
+
+          <section>
             <h2>Phoenix Installer</h2>
             <p>`phoenix.new` mix task</p>
           </section>
@@ -191,7 +236,11 @@
           <section>
             <pre><code data-trim>
 $ git clone https://github.com/elixir-lang/elixir.git
+            </code></pre>
+          </section>
 
+          <section>
+            <pre><code data-trim>
 Cloning into 'elixir'...
 remote: Counting objects: 82650, done.
 remote: Compressing objects: 100% (76/76), done.
@@ -205,8 +254,13 @@ $
           <section>
             <pre><code data-trim contenteditable>
 $ cd elixir
-$ make clean test
 
+$ make clean test
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
 cd lib/elixir && "/Users/wsmoak/projects/elixir/rebar" clean
 ==> elixir (clean)
 rm -rf ebin
@@ -574,20 +628,9 @@ $ elixir -v
 Elixir 1.1.0-beta
             </code></pre>
           </section>
-
-          <section>
-            <pre><code data-trim contenteditable>
-
-            </code></pre>
-          </section>
-
-
-          <section>
-            <h3>Release as fallback</h3>
-          </section>
         </section>
 
-                  <section>
+          <section>
             <section>
               <h3>Change the version number</h3>
             </section>
@@ -595,7 +638,11 @@ Elixir 1.1.0-beta
           <section>
             <pre><code data-trim contenteditable>
 $ git grep 1.1.0-beta
+            </code></pre>
+          </section>
 
+          <section>
+            <pre><code data-trim contenteditable>
 CHANGELOG.md:## v1.1.0-beta (2015-09-05)
 VERSION:1.1.0-beta
 src/elixir.app.src: {vsn, "1.1.0-beta"},
@@ -605,7 +652,11 @@ src/elixir.app.src: {vsn, "1.1.0-beta"},
           <section>
             <pre><code data-trim contenteditable>
 $ vi -b VERSION
+            </code></pre>
+          </section>
 
+          <section>
+            <pre><code data-trim data-noescape>
 1.1.0-20150912
 ~
 ~
@@ -617,12 +668,16 @@ $ vi -b VERSION
           </section>
 
           <section>
-            <pre><code data-trim>
+            <pre><code data-trim class="lang-bash">
 $ vi src/elixir.app.src
+            </code></pre>
+          </section>
 
+          <section>
+            <pre><code data-noescape data-trim class="lang-elixir">
 {application, elixir,
 [{description, "elixir"},
- {vsn, "1.1.0-20150912"},
+<mark class="highlight-inline">{vsn, "1.1.0-20150912"}</mark>
  {modules, [
         elixir
   ]},
@@ -668,26 +723,30 @@ index 3c099d4..1b97b77 100644
           <section>
             <pre><code data-trim>
 $ make clean test
-[...]
 
-$ elixir -v
-Elixir 1.1.0-20150912
+[...]
             </code></pre>
           </section>
 
+          <section>
+            <pre><code data-trim>
 
+$ elixir -v
+
+Elixir 1.1.0-20150912
+            </code></pre>
+          </section>
         </section>
 
 
 
 				<section>
 					<h1>CREDITS</h1>
-					<p style="text-align: left;">
-						- Adapted from Laura Thomson's
-						- <a href="https://www.youtube.com/watch?v=gpWTIrb5cNg">Getting Started to Contributing to Open Source</a><br/>
-					</p>
+					<p>Adapted from Laura Thomson's<br/>Getting Started to Contributing to Open Source</p>
+					<p><a href="https://www.youtube.com/watch?v=gpWTIrb5cNg">https://www.youtube.com/watch?v=gpWTIrb5cNg</a></p>
+
 					<h1>LICENSE</h1>
-					<p>CC...</p>
+					<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a></p>
 				</section>
 
 				<section>
