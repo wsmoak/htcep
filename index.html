@@ -80,7 +80,7 @@
 						<h2>Learn something new</h2>
 					</section>
 					<section>
-						<h2>Your Next Job?</h2>
+						<h2>Build your resume</h2>
 					</section>
 				</section>
 
@@ -88,6 +88,7 @@
 					<h2>What</h2>
 				</section>
 
+        <section>
 				<section>
   				<p class="fragment" style="text-align: left;">Mailing Lists</p>
 	  			<p class="fragment">(Google Groups)</p>
@@ -96,6 +97,16 @@
   				<p class="fragment" style="text-align: left;">Stack Overflow</p>
 	  			<p class="fragment">Reddit</p>
 	  			<p class="fragment" style="text-align: right;">IRC</p>
+			  </section>
+
+        <section>
+          <h3>DO</h3>
+        </section>
+
+        <section>
+          <h3>DON'T</h3>
+        </section>
+
 			  </section>
 
 				<section>
@@ -178,16 +189,496 @@
             <h3>Use master</h3>
           </section>
           <section>
-            <pre><code>
-            $ git clone https://github.com/elixir-lang/elixir.git
-            </code></pre>
+            <pre><code data-trim>
+$ git clone https://github.com/elixir-lang/elixir.git
 
+Cloning into 'elixir'...
+remote: Counting objects: 82650, done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 82650 (delta 23), reused 0 (delta 0), pack-reused 82573
+Receiving objects: 100% (82650/82650), 29.89 MiB | 1.17 MiB/s, done.
+Resolving deltas: 100% (45771/45771), done.
+Checking connectivity... done.
+$
+            </code></pre>
           </section>
+          <section>
+            <pre><code data-trim contenteditable>
+$ cd elixir
+$ make clean test
+
+cd lib/elixir && "/Users/wsmoak/projects/elixir/rebar" clean
+==> elixir (clean)
+rm -rf ebin
+rm -rf lib/*/ebin
+rm -rf lib/elixir/test/ebin
+rm -rf lib/*/tmp
+rm -rf lib/mix/test/fixtures/git_repo
+rm -rf lib/mix/test/fixtures/deps_on_git_repo
+rm -rf lib/mix/test/fixtures/git_rebar
+rm -rf lib/elixir/src/elixir.app.src
+/Applications/Xcode.app/Contents/Developer/usr/bin/make clean_man
+rm -f man/elixir.1
+rm -f man/iex.1
+==> elixir (compile)
+Compiled src/elixir_parser.yrl
+Compiled src/elixir_aliases.erl
+Compiled src/elixir_bitstring.erl
+Compiled src/elixir.erl
+Compiled src/elixir_bootstrap.erl
+Compiled src/elixir_code_server.erl
+Compiled src/elixir_config.erl
+Compiled src/elixir_counter.erl
+Compiled src/elixir_clauses.erl
+Compiled src/elixir_compiler.erl
+Compiled src/elixir_def_defaults.erl
+Compiled src/elixir_def_overridable.erl
+Compiled src/elixir_env.erl
+Compiled src/elixir_dispatch.erl
+Compiled src/elixir_def.erl
+Compiled src/elixir_errors.erl
+Compiled src/elixir_exp_clauses.erl
+Compiled src/elixir_fn.erl
+Compiled src/elixir_exp.erl
+Compiled src/elixir_import.erl
+Compiled src/elixir_for.erl
+Compiled src/elixir_lexical.erl
+Compiled src/elixir_locals.erl
+Compiled src/elixir_map.erl
+Compiled src/elixir_interpolation.erl
+Compiled src/elixir_module.erl
+Compiled src/elixir_rewrite.erl
+Compiled src/elixir_scope.erl
+Compiled src/elixir_sup.erl
+Compiled src/elixir_quote.erl
+Compiled src/elixir_translator.erl
+Compiled src/elixir_try.erl
+Compiled src/elixir_utils.erl
+Compiled src/elixir_tokenizer.erl
+Compiled src/elixir_parser.erl
+==> bootstrap (compile)
+Compiled lib/elixir/lib/kernel.ex
+Compiled lib/elixir/lib/macro/env.ex
+Compiled lib/elixir/lib/keyword.ex
+Compiled lib/elixir/lib/module.ex
+Compiled lib/elixir/lib/list.ex
+Compiled lib/elixir/lib/macro.ex
+Compiled lib/elixir/lib/code.ex
+Compiled lib/elixir/lib/module/locals_tracker.ex
+Compiled lib/elixir/lib/kernel/def.ex
+Compiled lib/elixir/lib/kernel/typespec.ex
+Compiled lib/elixir/lib/behaviour.ex
+Compiled lib/elixir/lib/exception.ex
+Compiled lib/elixir/lib/protocol.ex
+Compiled lib/elixir/lib/stream/reducers.ex
+Compiled lib/elixir/lib/enum.ex
+Compiled lib/elixir/lib/inspect/algebra.ex
+Compiled lib/elixir/lib/inspect.ex
+Compiled lib/elixir/lib/range.ex
+Compiled lib/elixir/lib/regex.ex
+Compiled lib/elixir/lib/string.ex
+Compiled lib/elixir/lib/string/chars.ex
+Compiled lib/elixir/lib/io.ex
+Compiled lib/elixir/lib/path.ex
+Compiled lib/elixir/lib/file.ex
+Compiled lib/elixir/lib/system.ex
+Compiled lib/elixir/lib/kernel/cli.ex
+Compiled lib/elixir/lib/kernel/error_handler.ex
+Compiled lib/elixir/lib/kernel/parallel_compiler.ex
+Compiled lib/elixir/lib/kernel/lexical_tracker.ex
+==> elixir (compile)
+Compiled lib/kernel.ex
+Compiled lib/atom.ex
+Compiled lib/bitwise.ex
+Compiled lib/behaviour.ex
+Compiled lib/access.ex
+Compiled lib/agent.ex
+Compiled lib/application.ex
+Compiled lib/code.ex
+Compiled lib/collectable.ex
+Compiled lib/float.ex
+Compiled lib/base.ex
+lib/file/stream.ex:68: warning: behaviour Enumerable undefined
+Compiled lib/file/stream.ex
+Compiled lib/dict.ex
+lib/gen_event/stream.ex:58: warning: behaviour Enumerable undefined
+Compiled lib/gen_event/stream.ex
+Compiled lib/gen_server.ex
+Compiled lib/agent/server.ex
+Compiled lib/integer.ex
+Compiled lib/file.ex
+Compiled lib/io.ex
+Compiled lib/hash_dict.ex
+Compiled lib/inspect/algebra.ex
+Compiled lib/io/ansi.ex
+Compiled lib/kernel/def.ex
+Compiled lib/io/stream.ex
+Compiled lib/kernel/error_handler.ex
+Compiled lib/kernel/lexical_tracker.ex
+Compiled lib/io/ansi/docs.ex
+Compiled lib/kernel/parallel_require.ex
+Compiled lib/kernel/parallel_compiler.ex
+Compiled lib/kernel/cli.ex
+Compiled lib/kernel/special_forms.ex
+Compiled lib/inspect.ex
+Compiled lib/keyword.ex
+Compiled lib/list.ex
+Compiled lib/macro/env.ex
+Compiled lib/map.ex
+Compiled lib/enum.ex
+Compiled lib/kernel/typespec.ex
+Compiled lib/list/chars.ex
+Compiled lib/exception.ex
+Compiled lib/node.ex
+Compiled lib/module/locals_tracker.ex
+Compiled lib/port.ex
+Compiled lib/option_parser.ex
+Compiled lib/module.ex
+Compiled lib/path.ex
+Compiled lib/range.ex
+Compiled lib/process.ex
+Compiled lib/record/extractor.ex
+Compiled lib/macro.ex
+Compiled lib/record.ex
+Compiled lib/stream/reducers.ex
+Compiled lib/protocol.ex
+Compiled lib/set.ex
+Compiled lib/file/stat.ex
+Compiled lib/kernel.ex
+Compiled lib/regex.ex
+Compiled lib/map_set.ex
+Compiled lib/hash_set.ex
+Compiled lib/supervisor/default.ex
+Compiled lib/gen_event.ex
+Compiled lib/string_io.ex
+Compiled lib/supervisor.ex
+Compiled lib/task/supervised.ex
+Compiled lib/supervisor/spec.ex
+Compiled lib/string/chars.ex
+Compiled lib/tuple.ex
+Compiled lib/task/supervisor.ex
+Compiled lib/task.ex
+Compiled lib/system.ex
+Compiled lib/uri.ex
+Compiled lib/string.ex
+Compiled lib/stream.ex
+Compiled lib/version.ex
+==> unicode (compile)
+Embedding the Unicode database... (this may take a while)
+Compiled unicode/unicode.ex
+==> elixir (compile)
+==> eex (compile)
+Compiled lib/eex/engine.ex
+Compiled lib/eex/smart_engine.ex
+Compiled lib/eex/tokenizer.ex
+Compiled lib/eex/compiler.ex
+Compiled lib/eex.ex
+==> mix (compile)
+Compiled lib/mix/config/agent.ex
+Compiled lib/mix/archive.ex
+Compiled lib/mix.ex
+Compiled lib/mix/compilers/erlang.ex
+Compiled lib/mix/cli.ex
+Compiled lib/mix/compilers/elixir.ex
+Compiled lib/mix/dep/umbrella.ex
+Compiled lib/mix/config.ex
+Compiled lib/mix/dep/lock.ex
+Compiled lib/mix/generator.ex
+Compiled lib/mix/dep/converger.ex
+Compiled lib/mix/hex.ex
+Compiled lib/mix/public_key.ex
+Compiled lib/mix/local.ex
+Compiled lib/mix/remote_converger.ex
+Compiled lib/mix/project_stack.ex
+Compiled lib/mix/dep.ex
+Compiled lib/mix/dep/loader.ex
+Compiled lib/mix/rebar.ex
+Compiled lib/mix/scm.ex
+Compiled lib/mix/scm/path.ex
+Compiled lib/mix/project.ex
+Compiled lib/mix/exceptions.ex
+Compiled lib/mix/shell.ex
+Compiled lib/mix/dep/fetcher.ex
+Compiled lib/mix/state.ex
+Compiled lib/mix/shell/process.ex
+Compiled lib/mix/shell/io.ex
+Compiled lib/mix/scm/git.ex
+Compiled lib/mix/tasks_server.ex
+Compiled lib/mix/task.ex
+Compiled lib/mix/tasks/local.ex
+Compiled lib/mix/tasks/local.rebar.ex
+Compiled lib/mix/tasks/local.public_keys.ex
+Compiled lib/mix/tasks/loadconfig.ex
+Compiled lib/mix/tasks/loadpaths.ex
+Compiled lib/mix/tasks/run.ex
+Compiled lib/mix/tasks/local.hex.ex
+Compiled lib/mix/tasks/deps.update.ex
+Compiled lib/mix/tasks/deps.unlock.ex
+Compiled lib/mix/tasks/test.ex
+Compiled lib/mix/tasks/iex.ex
+Compiled lib/mix/tasks/do.ex
+Compiled lib/mix/tasks/profile.fprof.ex
+Compiled lib/mix/tasks/deps.loadpaths.ex
+Compiled lib/mix/tasks/deps.ex
+Compiled lib/mix/tasks/help.ex
+Compiled lib/mix/tasks/deps.get.ex
+Compiled lib/mix/tasks/deps.clean.ex
+Compiled lib/mix/utils.ex
+Compiled lib/mix/tasks/deps.check.ex
+Compiled lib/mix/tasks/compile.yecc.ex
+Compiled lib/mix/tasks/escript.build.ex
+Compiled lib/mix/tasks/compile.ex
+Compiled lib/mix/tasks/deps.compile.ex
+Compiled lib/mix/tasks/compile.erlang.ex
+Compiled lib/mix/tasks/compile.leex.ex
+Compiled lib/mix/tasks/compile.protocols.ex
+Compiled lib/mix/tasks/cmd.ex
+Compiled lib/mix/tasks/compile.all.ex
+Compiled lib/mix/tasks/clean.ex
+Compiled lib/mix/tasks/compile.elixir.ex
+Compiled lib/mix/tasks/archive.ex
+Compiled lib/mix/tasks/archive.uninstall.ex
+Compiled lib/mix/tasks/archive.build.ex
+Compiled lib/mix/tasks/compile.app.ex
+Compiled lib/mix/tasks/archive.install.ex
+Compiled lib/mix/tasks/app.start.ex
+Compiled lib/mix/tasks/new.ex
+Generated mix app
+==> ex_unit (compile)
+Compiled lib/ex_unit/case_template.ex
+Compiled lib/ex_unit/capture_log.ex
+Compiled lib/ex_unit/capture_io.ex
+Compiled lib/ex_unit/callbacks.ex
+Compiled lib/ex_unit/case.ex
+Compiled lib/ex_unit/event_manager.ex
+Compiled lib/ex_unit/on_exit_handler.ex
+Compiled lib/ex_unit/runner_stats.ex
+Compiled lib/ex_unit.ex
+Compiled lib/ex_unit/filters.ex
+Compiled lib/ex_unit/server.ex
+Compiled lib/ex_unit/assertions.ex
+Compiled lib/ex_unit/formatter.ex
+Compiled lib/ex_unit/runner.ex
+Compiled lib/ex_unit/doc_test.ex
+Compiled lib/ex_unit/cli_formatter.ex
+Generated ex_unit app
+==> logger (compile)
+Compiled lib/logger/app.ex
+Compiled lib/logger/backends/console.ex
+Compiled lib/logger/formatter.ex
+Compiled lib/logger/config.ex
+Compiled lib/logger/utils.ex
+Compiled lib/logger.ex
+Compiled lib/logger/translator.ex
+Compiled lib/logger/watcher.ex
+Compiled lib/logger/error_handler.ex
+Generated logger app
+Generated eex app
+==> iex (compile)
+Compiled lib/iex/remsh.ex
+Compiled lib/iex/app.ex
+Compiled lib/iex/cli.ex
+Compiled lib/iex.ex
+Compiled lib/iex/history.ex
+Compiled lib/iex/evaluator.ex
+Compiled lib/iex/config.ex
+Compiled lib/iex/autocomplete.ex
+Compiled lib/iex/server.ex
+Compiled lib/iex/helpers.ex
+Compiled lib/iex/introspection.ex
+Generated iex app
+==> elixir (eunit)
+  All 199 tests passed.
+
+==> elixir (exunit)
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Finished in 13.8 seconds (9.2s on load, 4.6s on tests)
+2016 tests, 0 failures
+
+Randomized with seed 489273
+==> ex_unit (exunit)
+.....................................................................................................................................................................
+
+Finished in 2.3 seconds (1.2s on load, 1.0s on tests)
+165 tests, 0 failures
+
+Randomized with seed 838692
+==> logger (exunit)
+.......................................................................................
+
+Finished in 1.2 seconds (0.8s on load, 0.3s on tests)
+87 tests, 0 failures
+
+Randomized with seed 149832
+==> doctest (exunit)
+......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Finished in 10.8 seconds (10.5s on load, 0.2s on tests)
+870 tests, 0 failures
+
+Randomized with seed 582651
+==> mix (exunit)
+................................................................................................................................................................................................................................................................................
+
+Finished in 31.1 seconds (2.7s on load, 28.3s on tests)
+272 tests, 0 failures
+
+Randomized with seed 157277
+==> eex (exunit)
+.....................................................................
+
+Finished in 0.6 seconds (0.6s on load, 0.04s on tests)
+69 tests, 0 failures
+
+Randomized with seed 581809
+==> iex (exunit)
+..............................................................................
+
+Finished in 1.6 seconds (0.6s on load, 0.9s on tests)
+78 tests, 0 failures
+
+Randomized with seed 719841
+$
+            </code></pre>
+          </section>
+          <section>
+            <pre><code data-trim contenteditable>
+$ export ELIXIR_HOME=/Users/wsmoak/projects/elixir/bin
+
+$ export PATH=$ELIXIR_HOME:$PATH
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+$ vi ~/.bash_profile
+
+export ELIXIR_HOME=/Users/wsmoak/projects/elixir/bin
+export PATH=$ELIXIR_HOME:$PATH
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+$ which elixir
+
+/Users/wsmoak/projects/elixir/bin/elixir
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+$ elixir -v
+
+Elixir 1.1.0-beta
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+
+            </code></pre>
+          </section>
+
 
           <section>
             <h3>Release as fallback</h3>
           </section>
         </section>
+
+                  <section>
+            <section>
+              <h3>Change the version number</h3>
+            </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+$ git grep 1.1.0-beta
+
+CHANGELOG.md:## v1.1.0-beta (2015-09-05)
+VERSION:1.1.0-beta
+src/elixir.app.src: {vsn, "1.1.0-beta"},
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+$ vi -b VERSION
+
+1.1.0-20150912
+~
+~
+~
+~
+~
+:wq
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ vi src/elixir.app.src
+
+{application, elixir,
+[{description, "elixir"},
+ {vsn, "1.1.0-20150912"},
+ {modules, [
+        elixir
+  ]},
+ {registered, [elixir_config, elixir_code_server]},
+ {applications, [kernel,stdlib,compiler]},
+ {mod, {elixir,[]}},
+ {env, [{ansi_enabled, false}]}
+]}.
+~
+~
+:wq
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ git diff
+
+diff --git a/VERSION b/VERSION
+index 2ff3577..f40650e 100644
+--- a/VERSION
++++ b/VERSION
+@@ -1 +1 @@
+-1.1.0-beta
+\ No newline at end of file
++1.1.0-20150912
+\ No newline at end of file
+diff --git a/src/elixir.app.src b/src/elixir.app.src
+index 3c099d4..1b97b77 100644
+--- a/src/elixir.app.src
++++ b/src/elixir.app.src
+@@ -1,6 +1,6 @@
+ {application, elixir,
+ [{description, "elixir"},
+- {vsn, "1.1.0-beta"},
++ {vsn, "1.1.0-20150912"},
+  {modules, [
+ 	elixir
+   ]},
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ make clean test
+[...]
+
+$ elixir -v
+Elixir 1.1.0-20150912
+            </code></pre>
+          </section>
+
+
+        </section>
+
+
 
 				<section>
 					<h1>CREDITS</h1>
@@ -200,12 +691,17 @@
 				</section>
 
 				<section>
-					<h1>THE END</h1>
+					<h1>QUESTIONS?</h1>
 					<p style="text-align: left;">
 						- wsmoak@gmail.com<br/>
+						- http://wsmoak.net<br/>
 						- @wsmoak<br/>
 						- wsmoak on IRC and Slack
 					</p>
+				</section>
+
+				<section>
+				  <h1>THE END</h1>
 				</section>
 
 			</div>

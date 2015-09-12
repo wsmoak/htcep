@@ -15,7 +15,7 @@ That's great!  By the end of this talk I hope everyone is ready to contribute so
 
 So, a little about me.  I got involved in open source waaaay back (I had to look this up) in 2005.  I started asking questions on some Apache Software Foundation mailing lists, and then I started answering them and fixing the documentation, and the rest is history.  I was invited to be a committer and an Apache member and was recruited into a startup to do consulting and... it changed my life.
 
-Now I do tech support at Chargify, where we automate recurring billing for subscription services so that people can focus on building their business.
+I currently answer questions and fix documentation at Chargify, where we automate recurring billing for subscription services so that people can focus on building their business.
 
 I came to Elixir by way of the development team at Chargify who kept mentioning it over and over.  Initially I thought they were talking about Yet Another JavaScript framework and I ignored them, but eventually I took a look at it and tried it out.  And then I started asking questions and trying to answer them... and we'll have to see where it leads this time.
 
@@ -29,7 +29,9 @@ And when you fix someone else's something, you instantly have a new friend!  You
 
 Maybe instead of having a real world problem, you just want to learn something new.  Functional programming is all the rage these days, right?  One of the BEST ways to learn something is to teach it, so dive in, figure it out, and write a blog post about it!
 
-I'm not kidding, open source can get you a job.  If you get involved, start writing, get really, genuinely *interested* in something, that enthusiasm will shine through and it's really, really attractive to employers.  (Or at least, it is to the kind of employers I'm interested in working for!)
+Or maybe your regular work is heavy back-end lifting in a particular industry like banking and you want to try out a different problem space like developing an API and a web front end.  Stretch your brain!
+
+I'm not kidding, contributing open source can get you a job.  If you get involved, start writing, get really, genuinely *interested* in something, that enthusiasm will shine through and it's really, really attractive to employers.  (Or at least, it is to the kind of employers I'm interested in working for!)
 
 So let's assume I've convinced you that you definitely need to contribute.  What kinds of things might you do?
 
