@@ -116,19 +116,32 @@
           </section>
 
   				<section>
-	  			  <h2>Official Docs</h2>
+	  			  <h2>Gist</h2>
+	  		  </section>
+
+  				<section>
+	  			  <h2>Wiki</h2>
 	  		  </section>
 
   				<section>
 	  			  <h2>Your Blog</h2>
 	  		  </section>
 
-  				<section>
-	  			  <h2>Gist</h2>
-	  		  </section>
-
-
 			  </section>
+
+      <section>
+
+				<section>
+   			  <h2>Official Docs</h2>
+  		  </section>
+
+  		  <section>
+  		    <h2>In-browser - view page in main repo and click pencil to automatically fork.  It will either say "Fork this project and edit the file" or "Edit the file in your fork of this project" depending on whether you have forked it already.</h2>
+  		  </section>
+
+
+
+			</section>
 
         <section>
    			  <section>
@@ -634,7 +647,7 @@ $ vi src/elixir.app.src
             </code></pre>
           </section>
 
-          <section>
+          <section data-transition="slide-in fade-out">
             <pre><code data-trim>
 $ git diff
 
@@ -647,6 +660,35 @@ index 2ff3577..f40650e 100644
 \ No newline at end of file
 +1.1.0-20150912
 \ No newline at end of file
+diff --git a/src/elixir.app.src b/src/elixir.app.src
+index 3c099d4..1b97b77 100644
+--- a/src/elixir.app.src
++++ b/src/elixir.app.src
+@@ -1,6 +1,6 @@
+ {application, elixir,
+ [{description, "elixir"},
+- {vsn, "1.1.0-beta"},
++ {vsn, "1.1.0-20150912"},
+  {modules, [
+ 	elixir
+   ]},
+            </code></pre>
+          </section>
+
+
+          <section data-transition="fade-in slide-out">
+            <pre><code data-trim data-noescape>
+$ git diff
+
+diff --git a/VERSION b/VERSION
+index 2ff3577..f40650e 100644
+--- a/VERSION
++++ b/VERSION
+@@ -1 +1 @@
+-1.1.0-beta
+\ No newline at end of file
++1.1.0-20150912
+<mark>\ No newline at end of file</mark>
 diff --git a/src/elixir.app.src b/src/elixir.app.src
 index 3c099d4..1b97b77 100644
 --- a/src/elixir.app.src
@@ -679,12 +721,22 @@ Elixir 1.1.0-20150912
           </section>
         </section>
 
-        <section>
           <section>
             <h2>Hack on Phoenix</h2>
           </section>
+
+        <section>
+
+          <section>
+            <h2>Phoenix Framework</h2>
+          </section>
+
           <section>
             <h2>Use master</h2>
+          </section>
+
+          <section>
+          mix phoenix.new and change the phoenix dependency to point at github
           </section>
 
           <section>
@@ -705,9 +757,11 @@ Checking connectivity... done.
             </code></pre>
           </section>
 
+
+
+
           <section>
             <h2>Phoenix Installer</h2>
-            <p>`phoenix.new` mix task</p>
           </section>
 
           <section>
@@ -885,11 +939,6 @@ end
      {:cowboy, "~> 1.0"}]
   end
             </code></pre>
-          </section>
-
-
-          <section>
-            <h2>Phoenix Framework</h2>
           </section>
 
         </section>
