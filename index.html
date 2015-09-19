@@ -87,10 +87,10 @@
         <section>
           <p class="fragment" style="text-align: left;">Ask Questions</p>
           <p class="fragment">Answer Questions</p>
-          <p class="fragment" style="text-align: right;">Documentation</p>
+          <p class="fragment" style="text-align: right;">Write It Down</p>
           <h2>What To Do</h2>
           <p class="fragment" style="text-align: left;">Reproduce Issues</p>
-          <p class="fragment">Fix Issues</p>
+          <p class="fragment">Make Improvements</p>
           <p class="fragment" style="text-align: right;">Add Features</p>
         </section>
 
@@ -171,6 +171,14 @@
         </section>
 
         <section>
+          <img src="images/phoenix_guides_merged.png" />
+        </section>
+
+        <section>
+          <img src="images/phoenix_guides_contributors.png" />
+        </section>
+
+        <section>
           <h2>Questions</h2>
         </section>
 
@@ -181,7 +189,7 @@
 
         <section>
           <section>
-            <h2>Reproduce a Bug</h2>
+            <h2>Reproduce an Issue</h2>
           </section>
           <section>
             <h3>As written</h3>
@@ -587,141 +595,6 @@ Elixir 1.1.0-beta
           </section>
         </section>
 
-          <section>
-            <section>
-              <h3>Change the version number</h3>
-            </section>
-
-          <section>
-            <pre><code data-trim contenteditable>
-$ git grep 1.1.0-beta
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim contenteditable>
-CHANGELOG.md:## v1.1.0-beta (2015-09-05)
-VERSION:1.1.0-beta
-src/elixir.app.src: {vsn, "1.1.0-beta"},
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim contenteditable>
-$ vi -b VERSION
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim data-noescape>
-<mark>1.1.0-20150912</mark>
-~
-~
-~
-~
-~
-:wq
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim class="lang-bash">
-$ vi src/elixir.app.src
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-noescape data-trim class="lang-elixir">
-{application, elixir,
-[{description, "elixir"},
-<mark class="highlight-inline">{vsn, "1.1.0-20150912"}</mark>
- {modules, [
-        elixir
-  ]},
- {registered, [elixir_config, elixir_code_server]},
- {applications, [kernel,stdlib,compiler]},
- {mod, {elixir,[]}},
- {env, [{ansi_enabled, false}]}
-]}.
-~
-~
-:wq
-            </code></pre>
-          </section>
-
-          <section data-transition="slide-in fade-out">
-            <pre><code data-trim>
-$ git diff
-
-diff --git a/VERSION b/VERSION
-index 2ff3577..f40650e 100644
---- a/VERSION
-+++ b/VERSION
-@@ -1 +1 @@
--1.1.0-beta
-\ No newline at end of file
-+1.1.0-20150912
-\ No newline at end of file
-diff --git a/src/elixir.app.src b/src/elixir.app.src
-index 3c099d4..1b97b77 100644
---- a/src/elixir.app.src
-+++ b/src/elixir.app.src
-@@ -1,6 +1,6 @@
- {application, elixir,
- [{description, "elixir"},
-- {vsn, "1.1.0-beta"},
-+ {vsn, "1.1.0-20150912"},
-  {modules, [
-  elixir
-   ]},
-            </code></pre>
-          </section>
-
-
-          <section data-transition="fade-in slide-out">
-            <pre><code data-trim data-noescape>
-$ git diff
-
-diff --git a/VERSION b/VERSION
-index 2ff3577..f40650e 100644
---- a/VERSION
-+++ b/VERSION
-@@ -1 +1 @@
--1.1.0-beta
-\ No newline at end of file
-+1.1.0-20150912
-<mark>\ No newline at end of file</mark>
-diff --git a/src/elixir.app.src b/src/elixir.app.src
-index 3c099d4..1b97b77 100644
---- a/src/elixir.app.src
-+++ b/src/elixir.app.src
-@@ -1,6 +1,6 @@
- {application, elixir,
- [{description, "elixir"},
-- {vsn, "1.1.0-beta"},
-+ {vsn, "1.1.0-20150912"},
-  {modules, [
-  elixir
-   ]},
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ make clean test
-
-[...]
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ elixir -v
-
-Elixir 1.1.0-20150912
-            </code></pre>
-          </section>
-        </section>
 
 
         <section>
@@ -986,8 +859,145 @@ end
           <h1>THE END</h1>
         </section>
 
-        <section>
-          <h2>Patch the Docs</h2>
+          <section>
+
+            <section>
+              <h2>Bonus</h2>
+            </section>
+
+            <section>
+              <h3>Change the version number</h3>
+            </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+$ git grep 1.1.0-beta
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+CHANGELOG.md:## v1.1.0-beta (2015-09-05)
+VERSION:1.1.0-beta
+src/elixir.app.src: {vsn, "1.1.0-beta"},
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim contenteditable>
+$ vi -b VERSION
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim data-noescape>
+<mark>1.1.0-20150912</mark>
+~
+~
+~
+~
+~
+:wq
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim class="lang-bash">
+$ vi src/elixir.app.src
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-noescape data-trim class="lang-elixir">
+{application, elixir,
+[{description, "elixir"},
+<mark class="highlight-inline">{vsn, "1.1.0-20150912"}</mark>
+ {modules, [
+        elixir
+  ]},
+ {registered, [elixir_config, elixir_code_server]},
+ {applications, [kernel,stdlib,compiler]},
+ {mod, {elixir,[]}},
+ {env, [{ansi_enabled, false}]}
+]}.
+~
+~
+:wq
+            </code></pre>
+          </section>
+
+          <section data-transition="slide-in fade-out">
+            <pre><code data-trim>
+$ git diff
+
+diff --git a/VERSION b/VERSION
+index 2ff3577..f40650e 100644
+--- a/VERSION
++++ b/VERSION
+@@ -1 +1 @@
+-1.1.0-beta
+\ No newline at end of file
++1.1.0-20150912
+\ No newline at end of file
+diff --git a/src/elixir.app.src b/src/elixir.app.src
+index 3c099d4..1b97b77 100644
+--- a/src/elixir.app.src
++++ b/src/elixir.app.src
+@@ -1,6 +1,6 @@
+ {application, elixir,
+ [{description, "elixir"},
+- {vsn, "1.1.0-beta"},
++ {vsn, "1.1.0-20150912"},
+  {modules, [
+  elixir
+   ]},
+            </code></pre>
+          </section>
+
+
+          <section data-transition="fade-in slide-out">
+            <pre><code data-trim data-noescape>
+$ git diff
+
+diff --git a/VERSION b/VERSION
+index 2ff3577..f40650e 100644
+--- a/VERSION
++++ b/VERSION
+@@ -1 +1 @@
+-1.1.0-beta
+\ No newline at end of file
++1.1.0-20150912
+<mark>\ No newline at end of file</mark>
+diff --git a/src/elixir.app.src b/src/elixir.app.src
+index 3c099d4..1b97b77 100644
+--- a/src/elixir.app.src
++++ b/src/elixir.app.src
+@@ -1,6 +1,6 @@
+ {application, elixir,
+ [{description, "elixir"},
+- {vsn, "1.1.0-beta"},
++ {vsn, "1.1.0-20150912"},
+  {modules, [
+  elixir
+   ]},
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ make clean test
+
+[...]
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ elixir -v
+
+Elixir 1.1.0-20150912
+            </code></pre>
+          </section>
         </section>
 
 

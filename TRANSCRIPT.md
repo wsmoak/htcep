@@ -1,3 +1,4 @@
+# How To Contribute...
 
 Hello!  I'm so excited to be here.  The conference has been great so far and I have trouble deciding which talk to go to!
 
@@ -13,11 +14,21 @@ Is there anyone who is more focused on documentation and answering questions?
 
 That's great!  By the end of this talk I hope everyone is ready to contribute something to Elixir, Phoenix, or one of the many surrounding projects.
 
+# About Me
+
+## Apache
+
 So, a little about me.  I got involved in open source waaaay back (I had to look this up) in 2005.  I started asking questions on some Apache Software Foundation mailing lists, and then I started answering them and fixing the documentation, and the rest is history.  I was invited to be a committer and an Apache member and was recruited into a startup to do consulting and... it changed my life.
+
+## Chargify
 
 I currently answer questions and fix documentation at Chargify, where we automate recurring billing for subscription services so that people can focus on building their business.
 
+## Elixir
+
 I came to Elixir by way of the development team at Chargify who kept mentioning it over and over.  Initially I thought they were talking about Yet Another JavaScript framework and I ignored them, but eventually I took a look at it and tried it out.  And then I started asking questions and trying to answer them... and we'll have to see where it leads this time.
+
+# Why
 
 So Why should you contribute?  Why would you want to spend any of your limited free time working on this stuff and not getting paid for it?
 
@@ -31,7 +42,11 @@ Maybe instead of having a real world problem, you just want to learn something n
 
 Or maybe your regular work is heavy back-end lifting in a particular industry like banking and you want to try out a different problem space like developing an API and a web front end.  Stretch your brain!
 
+## Build Your Resume
+
 I'm not kidding, contributing open source can get you a job.  If you get involved, start writing, get really, genuinely *interested* in something, that enthusiasm will shine through and it's really, really attractive to employers.  (Or at least, it is to the kind of employers I'm interested in working for!)
+
+# What To Do
 
 So let's assume I've convinced you that you definitely need to contribute.  What kinds of things might you do?
 
@@ -53,13 +68,17 @@ This is where I start with any project, and I encourage you to as well.  For one
 
 You will be my hero if you keep an eye on Slack and document just *one* question that got a great answer so that it doesn't disappear and have to be asked again.
 
-## Reproduce a Bug
+## Reproduce an Issue
 
 One thing you can do to help is simply confirm that someone else isn't seeing things.  You can set up and run their example code and tell them whether or not you get the same error.
 
 Sometimes, just in the process of doing what you think they said they did, you'll do something different, and it will work.  Then you can backtrack and figure out what you did differently, and tell them what worked for you.  Or, you can confirm that yes, it really does do Y when you press X, and agree that it really shouldn't do that.
 
-Which brings us to...
+The next thing that's going to happen is someone will say "Can you try that on master?  I think it's fixed already..."
+
+And so if you've been happily using the released version from Homebrew or your package manager, here's where you step out on to the bleeding edge.  Thankfully, it's not too hard, and you can always go back.
+
+
 
 ## Report A Bug
 
