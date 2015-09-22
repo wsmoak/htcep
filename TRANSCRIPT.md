@@ -6,6 +6,8 @@ I'm going to be talking about Why and How To Contribute to Elixir and Phoenix.  
 
 It's precisely *because* you're busy developers working on your own projects that I want to a chance to convince you why you *should* contribute, and then show you where they keep everything around here so you don't have to go digging for it.
 
+That said, this is a beginner level talk aimed at people who have never contributed to an open source project before.
+
 Just so I can get a feel for the audience, who has already contributed to an open source project, you've forked the code or the docs, fixed something, and submitted a pull request?
 
 And now who never has?
@@ -54,13 +56,13 @@ Well the very first thing you can do is ask questions.  Just Ask.  If you are co
 
 A note about WHERE to ask.  When I got involved in open source, there was a project mailing list.  And that's pretty much it.  Now there are SO many places to ask!
 
-There's a table in the handout that attempts to sort out what goes where.  For example, the 'core' lists are where the developers discuss features and such, so if you have a question about how to do something using the latest release, that goes on the 'talk' list.  We'll talk about when it's okay to use the 'core' list in a bit.
-
 Stack Overflow is great if you have a well thought out question with a code snippet, and you'll get a wider audience, but it can be a rough crowd.  The mailing list is nicer. :)
 
 There are Slack and IRC channels.  Slack tends to be a little less formal, and also on IRC you're likely to find the core developers discussing some implementation detail and it can feel a little less like you should drop your beginner question right in the middle of that.
 
 One word about archives.  I don't think the Slack channel is archived forever, so please if you get a good answer, or if you see one go by, take some time to write it down.  IRC does have logs on BotBot.Me, but they're not indexed and it's very hard to search and find questions and answers unless you happen to remember, "Someone asked about that recently".  And even if you find it it's hard to link to a discrete discussion because other things may be interleaved.
+
+DO NOT ask how-to questions in the issue tracker or the core list.
 
 ## Documentation
 
@@ -78,7 +80,15 @@ The next thing that's going to happen is someone will say "Can you try that on m
 
 And so if you've been happily using the released version from Homebrew or your package manager, here's where you step out on to the bleeding edge.  Thankfully, it's not too hard, and you can always go back.
 
+To figure out how to do this, I checked the website, and the Installation page has instructions for building it from source.
 
+Three lines, plus environment.  So I tried it...
+
+## which elixir
+
+## elixir -v
+
+This is actually a problem, because now we've built a thing called 1.1.0-beta, but it's *different* from the one that already exists.  I have a bonus section at the end if we have time that shows how to change the version number before you build it, so you don't go saying "it works for me on version X" when your X is different from someone else's.
 
 ## Report A Bug
 
@@ -86,9 +96,7 @@ So you've reproduced what someone else is seeing... should you go straight to th
 
 First you should search the issues (including closed ones) to see if it's already in there.
 
-Next you should see if it can be reproduced with the latest and greatest version of the code available.
 
-Which brings us to...
 
 ## Hacking on Phoenix
 
@@ -96,21 +104,11 @@ Phoenix comes in two parts, the Installer (which is what you're using when you t
 
 Despite the fact that the installer comes first, it's actually *inside*
 
-## Hacking on Elixir
-
-Elixir itself is actually *super* simple to build.  This is what it looks like:
-
-git clone ...
-cd elixir
-make clean test
-set environment variables
-
-
 
 
 And now that I've shown a few ways for you to get more involved, what ideas do you have that would get more people active?
 
-What about pairing with someone?  I would *love* for the community to organize meetups -- Zoom is fabulous and only $15 a month.
+What about pairing with someone?  I would *love* for the community to organize online meetups -- Hangouts work for up to 15 people.  Zoom is fabulous and only $15 a month.
 
 
 
