@@ -676,15 +676,93 @@ $
         <section>
 
           <section>
-            <h2>Phoenix Framework</h2>
+            <h2>Existing Project</h2>
           </section>
 
           <section>
-            <h2>Use master</h2>
+            <pre><code>
+$ cd ~/projects/my_app
+ingenii:my_app wsmoak$ ls deps
+cowboy      phoenix     poison
+cowlib      phoenix_ecto    poolboy
+decimal     phoenix_html    postgrex
+ecto      phoenix_live_reload ranch
+fs      plug
+           </code></pre>
+          </section>
+
+          <section data-transition="slide-in fade-out">
+            <pre><code>
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{:phoenix, "~> 0.14"},
+     {:phoenix_ecto, "~> 0.5"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, "~> 1.1"},
+     {:phoenix_live_reload, "~> 0.4", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+            </code></pre>
+          </section>
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{:phoenix, github: "phoenixframework/phoenix"},
+     {:phoenix_ecto, "~> 0.5"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, "~> 1.1"},
+     {:phoenix_live_reload, "~> 0.4", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+            </code></pre>
+          </section>
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{:phoenix, github: "phoenixframework/phoenix"},
+     {:phoenix_ecto, github: "phoenixframework/phoenix_ecto"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, "~> 1.1"},
+     {:phoenix_live_reload, "~> 0.4", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+            </code></pre>
+          </section>
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{:phoenix, github: "phoenixframework/phoenix"},
+     {:phoenix_ecto, github: "phoenixframework/phoenix_ecto"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, github: "phoenixframework/phoenix_html"},
+     {:phoenix_live_reload, "~> 0.4", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+            </code></pre>
           </section>
 
           <section>
-          mix phoenix.new and change the phoenix dependency to point at github
+            <pre><code>
+$ mix deps.get
+            </code></pre>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h3>New Project</h3>
           </section>
 
           <section>
@@ -890,7 +968,6 @@ end
           </section>
 
         </section>
-
 
         <section>
           <h1>CREDITS</h1>
