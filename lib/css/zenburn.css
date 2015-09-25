@@ -105,6 +105,10 @@ based on dark.css by Ivan Sagalaev
   color: #7F9F7F;
 }
 
+mark {
+  background-color: gray;
+}
+
 .coffeescript .javascript,
 .javascript .xml,
 .tex .hljs-formula,
