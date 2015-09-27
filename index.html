@@ -41,9 +41,7 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <span>
           <p style="text-align: left;">Why &amp;</p>
-          </span>
           <h1>How To Contribute</h1>
           <h3>to Elixir and Phoenix</h3>
           <p>
@@ -107,6 +105,10 @@
         <section>
         <section>
           <h2>Where</h2>
+          <aside class="notes">
+          Project culture<br/>
+          Toxic personalities<br/>
+          </aside>
         </section>
         <section>
           <img src="images/elixir-community-happy-tweet.png" />
@@ -216,8 +218,6 @@
 
       </section>
 
-      </section>
-
         <section>
           <section>
             <h2>Reproduce an Issue</h2>
@@ -268,7 +268,7 @@ $ make clean test
 
           <section>
             <pre><code data-trim contenteditable>
-cd lib/elixir && "/Users/wsmoak/projects/elixir/rebar" clean
+cd lib/elixir &amp;&amp; "/Users/wsmoak/projects/elixir/rebar" clean
 ==> elixir (clean)
 rm -rf ebin
 rm -rf lib/*/ebin
@@ -604,10 +604,10 @@ $
             </code></pre>
           </section>
           <section>
-            <pre><code data-trim contenteditable>
-$ export ELIXIR_HOME=/Users/wsmoak/projects/elixir/bin
+            <pre><code data-trim data-noescape>
+$ export <mark>ELIXIR_HOME</mark>=/Users/wsmoak/projects/elixir/bin
 
-$ export PATH=$ELIXIR_HOME:$PATH
+$ export PATH=<mark>$ELIXIR_HOME</mark>:$PATH
             </code></pre>
           </section>
 
@@ -629,6 +629,7 @@ Elixir 1.1.0-beta
         </section>
 
         <section>
+
           <section>
             <h2>Test a Release Candidate</h2>
           </section>
@@ -659,7 +660,7 @@ state without impacting any branches by performing another checkout.
 If you want to create a new branch to retain commits you create, you may
 do so (now or later) by using -b with the checkout command again. Example:
 
-  git checkout -b <new-branch-name>
+  git checkout -b &lt;new-branch-name>
 $
             </code></pre>
           </section>
@@ -1043,7 +1044,7 @@ $ mix phoenix.new test_project <mark>--dev</mark>
 * creating test_project/web/static/assets/favicon.ico
 
 Fetch and install dependencies? [Yn] Y
-* running npm install && node node_modules/brunch/bin/brunch build
+* running npm install &amp;&amp; node node_modules/brunch/bin/brunch build
 * running mix deps.get
 
 We are all set! Run your Phoenix application:
@@ -1125,7 +1126,7 @@ end
             </code></pre>
           </section>
 
-          <section data-transition fade-in slide-out>
+          <section data-transition="fade-in slide-out">
             <pre><code data-trim data-noescape>
 
   # Specifies your project dependencies
