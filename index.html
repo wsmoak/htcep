@@ -58,6 +58,10 @@
         </section>
 
         <section>
+          <p>wsmoak.net -> Talks</p>
+        </section>
+
+        <section>
           <section>
             <h2>About Me</h2>
           </section>
@@ -73,13 +77,15 @@
         </section>
 
         <section>
-          <p>wsmoak.net/speaking.html</p>
-        </section>
-
-        <section>
           <section>
             <h2>Why</h2>
+            <aside class="notes">
+            You need something / scratch itch<br/>
+            Learn something new<br/>
+            Build resume
+            </aside>
           </section>
+<!--
           <section>
             <h2>You need something</h2>
           </section>
@@ -95,11 +101,12 @@
           <section>
             <h2>Build your resume</h2>
           </section>
+-->
         </section>
 
         <section>
         <section>
-          <h3>Where</h3>
+          <h2>Where</h2>
         </section>
         <section>
           <img src="images/elixir-community-happy-tweet.png" />
@@ -220,6 +227,9 @@
           </section>
           <section>
             <h3>On master</h3>
+            <aside class="notes">
+              For Elixir
+            </aside>
           </section>
 
           <section>
@@ -664,6 +674,211 @@ $ make clean test
         </section>
 
         <section>
+          <section>
+            <h3>Build the Docs</h3>
+          </section>
+          <section>
+            <img src="images/elixir_building_docs.png"/>
+          </section>
+
+          <section data-transition="slide-in fade-out">
+            <pre><code>
+$ cd ..
+            </code></pre>
+            <aside class="notes">
+            We are in elixir dir<br/>
+            need to be in parent dir
+            </aside>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+$ git clone git://github.com/elixir-lang/ex_doc.git
+            </code></pre>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+Cloning into 'ex_doc'...
+remote: Counting objects: 7195, done.
+remote: Compressing objects: 100% (334/334), done.
+remote: Total 7195 (delta 154), reused 0 (delta 0), pack-reused 6859
+Receiving objects: 100% (7195/7195), 2.32 MiB | 145.00 KiB/s, done.
+Resolving deltas: 100% (3742/3742), done.
+Checking connectivity... done.
+$
+            </code></pre>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+$ cd ex_doc
+
+$ ../elixir/bin/mix do deps.get, compile
+            </code></pre>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code data-noescape>
+$ <mark>../elixir/bin/mix</mark> do deps.get, compile
+            </code></pre>
+            <aside class="notes">
+              executes the mix we just built
+            </aside>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code data-noescape>
+$ ../elixir/bin/mix <mark>do</mark> deps.get, compile
+            </code></pre>
+            <aside class="notes">
+              the 'do' task takes a comma delimited list of tasks
+            </aside>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code data-noescape>
+$ ../elixir/bin/mix do <mark>deps.get, compile</mark>
+            </code></pre>
+            <aside class="notes">
+              the list of tasks to execute
+            </aside>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+* Getting markdown (https://github.com/devinus/markdown.git)
+Cloning into '/Users/wsmoak/projects/ex_doc/deps/markdown'...
+remote: Counting objects: 99, done.
+remote: Total 99 (delta 0), reused 0 (delta 0), pack-reused 99
+Checking connectivity... done.
+* Getting hoedown (https://github.com/hoedown/hoedown.git)
+Cloning into '/Users/wsmoak/projects/ex_doc/deps/hoedown'...
+remote: Counting objects: 2940, done.
+remote: Total 2940 (delta 0), reused 0 (delta 0), pack-reused 2940
+Receiving objects: 100% (2940/2940), 913.78 KiB | 1.10 MiB/s, done.
+Resolving deltas: 100% (1786/1786), done.
+Checking connectivity... done.
+Running dependency resolution
+* Getting earmark (Hex package)
+Checking package (https://s3.amazonaws.com/s3.hex.pm/tarballs/earmark-0.1.17.tar)
+Using locally cached package
+Unpacked package tarball (/Users/wsmoak/.hex/packages/earmark-0.1.17.tar)
+* Getting excoveralls (Hex package)
+Checking package (https://s3.amazonaws.com/s3.hex.pm/tarballs/excoveralls-0.3.11.tar)
+Using locally cached package
+Unpacked package tarball (/Users/wsmoak/.hex/packages/excoveralls-0.3.11.tar)
+* Getting hackney (Hex package)
+Checking package (https://s3.amazonaws.com/s3.hex.pm/tarballs/hackney-1.3.2.tar)
+Using locally cached package
+Unpacked package tarball (/Users/wsmoak/.hex/packages/hackney-1.3.2.tar)
+* Getting exjsx (Hex package)
+Checking package (https://s3.amazonaws.com/s3.hex.pm/tarballs/exjsx-3.2.0.tar)
+Using locally cached package
+Unpacked package tarball (/Users/wsmoak/.hex/packages/exjsx-3.2.0.tar)
+* Getting jsx (Hex package)
+Checking package (https://s3.amazonaws.com/s3.hex.pm/tarballs/jsx-2.6.2.tar)
+Using locally cached package
+Unpacked package tarball (/Users/wsmoak/.hex/packages/jsx-2.6.2.tar)
+* Getting ssl_verify_hostname (Hex package)
+Checking package (https://s3.amazonaws.com/s3.hex.pm/tarballs/ssl_verify_hostname-1.0.5.tar)
+Using locally cached package
+Unpacked package tarball (/Users/wsmoak/.hex/packages/ssl_verify_hostname-1.0.5.tar)
+* Getting idna (Hex package)
+Checking package (https://s3.amazonaws.com/s3.hex.pm/tarballs/idna-1.0.2.tar)
+Using locally cached package
+Unpacked package tarball (/Users/wsmoak/.hex/packages/idna-1.0.2.tar)
+==> earmark
+Compiled lib/earmark/cli.ex
+Compiled lib/earmark/context.ex
+Compiled lib/earmark.ex
+Compiled lib/earmark/helpers.ex
+Compiled lib/earmark/inline.ex
+Compiled lib/earmark/parser.ex
+Compiled lib/earmark/line.ex
+Compiled lib/earmark/html_renderer.ex
+Compiled lib/earmark/block.ex
+Generated earmark app
+==> ex_doc
+Compiled lib/ex_doc/markdown/earmark.ex
+Compiled lib/ex_doc/markdown/hoedown.ex
+Compiled lib/ex_doc/markdown.ex
+Compiled lib/ex_doc/cli.ex
+Compiled lib/ex_doc/markdown/pandoc.ex
+Compiled lib/ex_doc.ex
+Compiled lib/mix/tasks/docs.ex
+Compiled lib/ex_doc/formatter/html.ex
+Compiled lib/ex_doc/retriever.ex
+Compiled lib/ex_doc/formatter/html/templates.ex
+Compiled lib/ex_doc/formatter/html/autolink.ex
+Generated ex_doc app
+$
+            </code></pre>
+            <aside class="notes">
+            Now ExDoc is built and we can
+            </aside>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+$ cd ../elixir
+
+$ make docs
+            </code></pre>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code data-trim>
+==> elixir (compile)
+==> ex_doc (elixir)
+bin/elixir ../ex_doc/bin/ex_doc "Elixir" "1.2.0-dev" "lib/elixir/ebin"
+-m "Kernel" -u "https://github.com/elixir-lang/elixir" --source-ref
+"7ba752e0381d24361347d2071527a2e6874d97ee"  -o doc/elixir -p
+http://elixir-lang.org/docs.html
+==> ex_doc (eex)
+bin/elixir ../ex_doc/bin/ex_doc "EEx" "1.2.0-dev" "lib/eex/ebin" -m
+"EEx" -u "https://github.com/elixir-lang/elixir" --source-ref
+"7ba752e0381d24361347d2071527a2e6874d97ee"  -o doc/eex -p
+http://elixir-lang.org/docs.html
+==> ex_doc (mix)
+bin/elixir ../ex_doc/bin/ex_doc "Mix" "1.2.0-dev" "lib/mix/ebin" -m
+"Mix" -u "https://github.com/elixir-lang/elixir" --source-ref
+"7ba752e0381d24361347d2071527a2e6874d97ee"  -o doc/mix -p
+http://elixir-lang.org/docs.html
+==> ex_doc (iex)
+bin/elixir ../ex_doc/bin/ex_doc "IEx" "1.2.0-dev" "lib/iex/ebin" -m
+"IEx" -u "https://github.com/elixir-lang/elixir" --source-ref
+"7ba752e0381d24361347d2071527a2e6874d97ee"  -o doc/iex -p
+http://elixir-lang.org/docs.html
+==> ex_doc (ex_unit)
+bin/elixir ../ex_doc/bin/ex_doc "ExUnit" "1.2.0-dev" "lib/ex_unit/ebin" -m
+ "ExUnit" -u "https://github.com/elixir-lang/elixir" --source-ref
+ "7ba752e0381d24361347d2071527a2e6874d97ee"  -o doc/ex_unit -p
+ http://elixir-lang.org/docs.html
+==> ex_doc (logger)
+bin/elixir ../ex_doc/bin/ex_doc "Logger" "1.2.0-dev" "lib/logger/ebin" -m
+ "Logger" -u "https://github.com/elixir-lang/elixir" --source-ref
+ "7ba752e0381d24361347d2071527a2e6874d97ee"  -o doc/logger -p
+ http://elixir-lang.org/docs.html
+            </code></pre>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <pre><code>
+$ ls doc
+eex elixir  ex_unit iex logger  mix
+
+$ open doc/elixir/index.html
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="images/elixir_ex_doc_built.png" />
+          </section>
+
+        </section>
+
+        <section>
 
           <section>
             <h2>Phoenix</h2>
@@ -692,46 +907,17 @@ $ make clean test
   end
             </code></pre>
           </section>
+
           <section data-transition="fade-in fade-out">
-            <pre><code>
+            <pre><code data-noescape>
   # Specifies your project dependencies
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, github: "phoenixframework/phoenix"},
+    [{:phoenix, <mark>github: "phoenixframework/phoenix"</mark>},
      {:phoenix_ecto, "~> 0.5"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 1.1"},
-     {:phoenix_live_reload, "~> 0.4", only: :dev},
-     {:cowboy, "~> 1.0"}]
-  end
-            </code></pre>
-          </section>
-          <section data-transition="fade-in fade-out">
-            <pre><code>
-  # Specifies your project dependencies
-  #
-  # Type `mix help deps` for examples and options
-  defp deps do
-    [{:phoenix, github: "phoenixframework/phoenix"},
-     {:phoenix_ecto, github: "phoenixframework/phoenix_ecto"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 1.1"},
-     {:phoenix_live_reload, "~> 0.4", only: :dev},
-     {:cowboy, "~> 1.0"}]
-  end
-            </code></pre>
-          </section>
-          <section data-transition="fade-in fade-out">
-            <pre><code>
-  # Specifies your project dependencies
-  #
-  # Type `mix help deps` for examples and options
-  defp deps do
-    [{:phoenix, github: "phoenixframework/phoenix"},
-     {:phoenix_ecto, github: "phoenixframework/phoenix_ecto"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, github: "phoenixframework/phoenix_html"},
      {:phoenix_live_reload, "~> 0.4", only: :dev},
      {:cowboy, "~> 1.0"}]
   end
@@ -802,6 +988,13 @@ $ rm ~/.mix/archives/phoenix_new*
 $ mix phoenix.new test_project --dev
             </code></pre>
           </section>
+
+          <section data-transition="slide-in fade-out">
+            <pre><code data-trim data-noescape>
+$ mix phoenix.new <mark>test_project</mark> --dev
+            </code></pre>
+          </section>
+
           <section data-transition="fade-in slide-out">
             <pre><code data-trim data-noescape>
 $ mix phoenix.new test_project <mark>--dev</mark>
@@ -912,7 +1105,6 @@ defmodule TestProject.Mixfile do
      {:cowboy, "~> 1.0"}]
   end
 end
-
             </code></pre>
           </section>
 
