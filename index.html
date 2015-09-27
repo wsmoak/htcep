@@ -682,7 +682,7 @@ $ make clean test
             <img src="images/elixir_building_docs.png"/>
           </section>
 
-          <section data-transition="slide-in fade-out">
+          <section>
             <pre><code>
 $ cd ..
             </code></pre>
@@ -692,13 +692,13 @@ $ cd ..
             </aside>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code>
 $ git clone git://github.com/elixir-lang/ex_doc.git
             </code></pre>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code>
 Cloning into 'ex_doc'...
 remote: Counting objects: 7195, done.
@@ -711,7 +711,7 @@ $
             </code></pre>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code>
 $ cd ex_doc
 
@@ -719,7 +719,7 @@ $ ../elixir/bin/mix do deps.get, compile
             </code></pre>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code data-noescape>
 $ <mark>../elixir/bin/mix</mark> do deps.get, compile
             </code></pre>
@@ -728,7 +728,7 @@ $ <mark>../elixir/bin/mix</mark> do deps.get, compile
             </aside>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code data-noescape>
 $ ../elixir/bin/mix <mark>do</mark> deps.get, compile
             </code></pre>
@@ -737,7 +737,7 @@ $ ../elixir/bin/mix <mark>do</mark> deps.get, compile
             </aside>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code data-noescape>
 $ ../elixir/bin/mix do <mark>deps.get, compile</mark>
             </code></pre>
@@ -746,7 +746,7 @@ $ ../elixir/bin/mix do <mark>deps.get, compile</mark>
             </aside>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code>
 * Getting markdown (https://github.com/devinus/markdown.git)
 Cloning into '/Users/wsmoak/projects/ex_doc/deps/markdown'...
@@ -820,7 +820,7 @@ $
             </aside>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code>
 $ cd ../elixir
 
@@ -828,7 +828,7 @@ $ make docs
             </code></pre>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code data-trim>
 ==> elixir (compile)
 ==> ex_doc (elixir)
@@ -864,7 +864,7 @@ bin/elixir ../ex_doc/bin/ex_doc "Logger" "1.2.0-dev" "lib/logger/ebin" -m
             </code></pre>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code>
 $ ls doc
 eex elixir  ex_unit iex logger  mix
@@ -893,7 +893,7 @@ $ open doc/elixir/index.html
             <h2>Existing Project</h2>
           </section>
 
-          <section data-transition="slide-in fade-out">
+          <section>
             <pre><code>
   # Specifies your project dependencies
   #
@@ -909,7 +909,7 @@ $ open doc/elixir/index.html
             </code></pre>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code data-noescape>
   # Specifies your project dependencies
   #
@@ -984,19 +984,19 @@ $ rm ~/.mix/archives/phoenix_new*
             </code></pre>
           </section>
 
-          <section data-transition="slide-in fade-out">
+          <section>
             <pre><code data-trim>
 $ mix phoenix.new test_project --dev
             </code></pre>
           </section>
 
-          <section data-transition="slide-in fade-out">
+          <section>
             <pre><code data-trim data-noescape>
 $ mix phoenix.new <mark>test_project</mark> --dev
             </code></pre>
           </section>
 
-          <section data-transition="fade-in slide-out">
+          <section>
             <pre><code data-trim data-noescape>
 $ mix phoenix.new test_project <mark>--dev</mark>
             </code></pre>
@@ -1060,7 +1060,7 @@ $
             </code></pre>
           </section>
 
-          <section data-transition="slide-in fade-out">
+          <section>
             <pre><code data-trim>
 $ cd test_project
 
@@ -1109,7 +1109,7 @@ end
             </code></pre>
           </section>
 
-          <section data-transition="fade-in fade-out">
+          <section>
             <pre><code data-trim data-noescape>
 
   # Specifies your project dependencies
@@ -1126,7 +1126,7 @@ end
             </code></pre>
           </section>
 
-          <section data-transition="fade-in slide-out">
+          <section>
             <pre><code data-trim data-noescape>
 
   # Specifies your project dependencies
@@ -1271,7 +1271,7 @@ $ vi src/elixir.app.src
             </code></pre>
           </section>
 
-          <section data-transition="slide-in fade-out">
+          <section>
             <pre><code data-trim>
 $ git diff
 
@@ -1300,7 +1300,7 @@ index 3c099d4..1b97b77 100644
           </section>
 
 
-          <section data-transition="fade-in slide-out">
+          <section>
             <pre><code data-trim data-noescape>
 $ git diff
 
@@ -1361,7 +1361,7 @@ Elixir 1.1.0-20150912
         history: true,
         center: true,
 
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
 
         // Optional reveal.js plugins
         dependencies: [
