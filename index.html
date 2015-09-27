@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- link rel="stylesheet" href="lib/css/tomorrow-night-bright.css" -->
 
     <!-- Printing and PDF exports -->
     <script>
@@ -41,11 +41,20 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
+          <span>
+          <p style="text-align: left;">Why &amp;</p>
+          </span>
           <h1>How To Contribute</h1>
           <h3>to Elixir and Phoenix</h3>
           <p>
-            <small><a href="http://wsmoak.net">Wendy Smoak</a> / <a href="http://twitter.com/wsmoak">@wsmoak</a></small>
+            <a href="http://wsmoak.net">Wendy Smoak</a> / <a href="http://twitter.com/wsmoak">@wsmoak</a>
           </p>
+          <p style="text-align: left;"><br/><br/>ElixirConf US 2015</p>
+          <aside class="notes">
+            Beginner Level Talk<br/>
+            Never Contributed Before<br/>
+            3 1/2 things!
+          </aside>
         </section>
 
         <section>
@@ -54,13 +63,17 @@
           </section>
           <section>
             <h2>Apache</h2>
-          </section>
-          <section>
-            <h2>Chargify</h2>
+            <aside class="notes">
+              2005
+            </aside>
           </section>
           <section>
             <h2>Elixir!</h2>
           </section>
+        </section>
+
+        <section>
+          <p>wsmoak.net/speaking.html</p>
         </section>
 
         <section>
@@ -85,7 +98,16 @@
         </section>
 
         <section>
+        <section>
           <h3>Where</h3>
+        </section>
+        <section>
+          <img src="images/elixir-community-happy-tweet.png" />
+          <aside class="notes">
+            Ron Jeffries<br/>
+            Signer of Agile Mainfesto
+          </aside>
+        </section>
         </section>
 
         <section>
@@ -178,7 +200,11 @@
         </section>
 
         <section>
-          <h2>Questions</h2>
+          <img src="images/elixir-first-commit-tweet.png" />
+        </section>
+
+        <section>
+          <img src="images/phoenix_guides_pr_comment.png" />
         </section>
 
       </section>
@@ -577,15 +603,6 @@ $ export PATH=$ELIXIR_HOME:$PATH
 
           <section>
             <pre><code data-trim contenteditable>
-$ vi ~/.bash_profile
-
-export ELIXIR_HOME=/Users/wsmoak/projects/elixir/bin
-export PATH=$ELIXIR_HOME:$PATH
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim contenteditable>
 $ which elixir
 
 /Users/wsmoak/projects/elixir/bin/elixir
@@ -636,13 +653,17 @@ do so (now or later) by using -b with the checkout command again. Example:
 $
             </code></pre>
           </section>
+          <section>
+            <pre><code data-trim>
+$ cd elixir-v1.1.0-rc.0
+
+$ make clean test
+            </code></pre>
+          </section>
 
         </section>
 
         <section>
-          <section>
-            <h2>Report an Issue</h2>
-          </section>
 
           <section>
             <h2>Phoenix</h2>
@@ -929,11 +950,23 @@ end
             </code></pre>
           </section>
 
+          <section>
+            <pre><code data-trim>
+$ mix phoenix.server
+            </code></pre>
+          </section>
+          <section>
+            <pre><code data-trim>
+TODO Screenshot of Hello Phoenix
+            </code></pre>
+          </section>
+
         </section>
 
         <section>
         <section>
           <h2>Fix an Issue!</h2>
+          <h2>Add a Feature!</h2>
         </section>
         <section>
           <p>(Maybe...)</p>
@@ -941,12 +974,9 @@ end
         </section>
 
         <section>
-          <h1>CREDITS</h1>
-          <p>Adapted from Laura Thomson's<br/>Getting Started to Contributing to Open Source</p>
-          <p><a href="https://www.youtube.com/watch?v=gpWTIrb5cNg">https://www.youtube.com/watch?v=gpWTIrb5cNg</a></p>
-
-          <h1>LICENSE</h1>
-          <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a></p>
+          <h1>Thanks!</h1>
+          <img src="images/elixirconf-logo-full-transparent.png"/>
+          <img src="images/chargify_logo.png"/>
         </section>
 
         <section>
@@ -957,10 +987,28 @@ end
             - @wsmoak<br/>
             - wsmoak on IRC and Slack
           </p>
-        </section>
+         </section>
 
         <section>
           <h2>Have fun</h2>
+        </section>
+
+        <section>
+          <h2>Resources</h2>
+          <p style="text-align: left;">http://wsmoak.net/2015/09/08/building-elixir-from-source.html</p>
+          <p style="text-align: left;">http://wsmoak.net/2015/08/17/phoenix-bleeding-edge.html</p>
+
+        </section>
+
+
+        <section>
+          <h2>CREDITS</h2>
+          <p>Adapted from Laura Thomson's<br/>Getting Started to Contributing to Open Source</p>
+          <p><a href="https://www.youtube.com/watch?v=gpWTIrb5cNg">https://www.youtube.com/watch?v=gpWTIrb5cNg</a></p>
+
+          <h2>LICENSE</h2>
+          <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a></p>
+
         </section>
 
         <section>
@@ -1103,19 +1151,6 @@ Elixir 1.1.0-20150912
             </code></pre>
           </section>
         </section>
-
-        <section>
-            <pre><code>
-$ cd ~/projects/my_app
-ingenii:my_app wsmoak$ ls deps
-cowboy      phoenix     poison
-cowlib      phoenix_ecto    poolboy
-decimal     phoenix_html    postgrex
-ecto      phoenix_live_reload ranch
-fs      plug
-           </code></pre>
-          </section>
-
 
       </div>
     </div>
