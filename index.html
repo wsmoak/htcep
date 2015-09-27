@@ -51,7 +51,7 @@
           <aside class="notes">
             Beginner Level Talk<br/>
             Never Contributed Before<br/>
-            3 1/2 things!
+            TODO: # of things
           </aside>
         </section>
 
@@ -138,7 +138,8 @@
           <p class="fragment" style="text-align: left;">IRC</p>
           <p class="fragment">Stack Overflow</p>
           <p class="fragment" style="text-align: right;">Reddit</p>
-          <aside style="notes">
+          <aside class="notes">
+          Use the right list: talk vs. core
           CodeWall
           </aside>
         </section>
@@ -176,12 +177,17 @@
         <section>
           <img src="images/phoenix_guides_community_fork.png" alt=""/>
           <aside class="notes">
+          "Edit the file in your fork of this project"<br/>
+          or<br/>
           "Fork this project and edit the file"
           </aside>
         </section>
 
         <section>
           <img src="images/phoenix_guides_community_edit.png" alt=""/>
+          <aside class="notes">
+          Submitting a change will write to new branch in your fork
+          </aside>
         </section>
 
         <section>
@@ -232,9 +238,13 @@
         </section>
 
         <section>
+          <p>I think there's an extra space...</p>
           <img src="images/phoenix_guides_pr_comment.png" alt=""/>
           <aside class="notes">
-          reality: they ask for changes
+          reality: they ask for changes<br/>
+          "squash your commits"<br/>
+          ask for help<br/>
+          email me
           </aside>
 
         </section>
@@ -248,11 +258,320 @@
           <section>
             <h3>As written</h3>
           </section>
+
+          <section>
+            <h2>On master</h2>
+          </section>
+
+          <section>
+            <h2>Phoenix</h2>
+          </section>
+
+          <section>
+            <h2>Existing Project</h2>
+          </section>
+
+          <section>
+            <pre><code>
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{:phoenix, "~> 0.14"},
+     {:phoenix_ecto, "~> 0.5"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, "~> 1.1"},
+     {:phoenix_live_reload, "~> 0.4", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-noescape>
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{:phoenix, <mark>github: "phoenixframework/phoenix"</mark>},
+     {:phoenix_ecto, "~> 0.5"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, "~> 1.1"},
+     {:phoenix_live_reload, "~> 0.4", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code>
+$ mix deps.get
+            </code></pre>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h3>New Project</h3>
+          </section>
+
+          <section>
+            <h2>Phoenix Installer</h2>
+            <aside class="notes">
+            the phoenix.new Mix Task
+            </aside>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ git clone https://github.com/phoenixframework/phoenix.git
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+Cloning into 'phoenix'...
+remote: Counting objects: 19702, done.
+remote: Compressing objects: 100% (49/49), done.
+remote: Total 19702 (delta 13), reused 0 (delta 0), pack-reused 19649
+Receiving objects: 100% (19702/19702), 3.65 MiB | 636.00 KiB/s, done.
+Resolving deltas: 100% (12877/12877), done.
+Checking connectivity... done.
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ cd phoenix/installer
+            </code></pre>
+            <aside class="notes">
+            Must be in this directory<br/>
+            Will not work elsewhere
+            </aside>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ mix phoenix.new --version
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+Phoenix v1.0.2
+            </code></pre>
+            <aside class="notes">
+            Which code is this?
+            </aside>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ rm ~/.mix/archives/phoenix_new*
+            </code></pre>
+            <aside class="notes">
+            Must delete any installed version.
+            </aside>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ mix phoenix.new test_project --dev
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim data-noescape>
+$ mix phoenix.new <mark>test_project</mark> --dev
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim data-noescape>
+$ mix phoenix.new test_project <mark>--dev</mark>
+            </code></pre>
+          </section>
+
+
+          <section id="phoenix_new_output">
+            <pre><code data-trim>
+* creating test_project/config/config.exs
+* creating test_project/config/dev.exs
+* creating test_project/config/prod.exs
+* creating test_project/config/prod.secret.exs
+* creating test_project/config/test.exs
+* creating test_project/lib/test_project.ex
+* creating test_project/lib/test_project/endpoint.ex
+* creating test_project/test/controllers/page_controller_test.exs
+* creating test_project/test/views/error_view_test.exs
+* creating test_project/test/views/page_view_test.exs
+* creating test_project/test/views/layout_view_test.exs
+* creating test_project/test/support/conn_case.ex
+* creating test_project/test/support/channel_case.ex
+* creating test_project/test/test_helper.exs
+* creating test_project/web/channels/user_socket.ex
+* creating test_project/web/controllers/page_controller.ex
+* creating test_project/web/templates/layout/app.html.eex
+* creating test_project/web/templates/page/index.html.eex
+* creating test_project/web/views/error_view.ex
+* creating test_project/web/views/layout_view.ex
+* creating test_project/web/views/page_view.ex
+* creating test_project/web/router.ex
+* creating test_project/web/web.ex
+* creating test_project/mix.exs
+* creating test_project/README.md
+* creating test_project/lib/test_project/repo.ex
+* creating test_project/test/support/model_case.ex
+* creating test_project/priv/repo/seeds.exs
+* creating test_project/.gitignore
+* creating test_project/brunch-config.js
+* creating test_project/package.json
+* creating test_project/web/static/css/app.css
+* creating test_project/web/static/js/app.js
+* creating test_project/web/static/js/socket.js
+* creating test_project/web/static/assets/robots.txt
+* creating test_project/web/static/assets/images/phoenix.png
+* creating test_project/web/static/assets/favicon.ico
+
+Fetch and install dependencies? [Yn] Y
+* running npm install &amp;&amp; node node_modules/brunch/bin/brunch build
+* running mix deps.get
+
+We are all set! Run your Phoenix application:
+
+    $ cd test_project
+    $ mix ecto.create
+    $ mix phoenix.server
+
+You can also run your app inside IEx (Interactive Elixir) as:
+
+    $ iex -S mix phoenix.server
+$
+            </code></pre>
+            <aside class="notes">
+              Normal phoenix.new output<br/>
+              to Fetch and install dependencies? Y
+            </aside>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ cd test_project
+
+$ cat mix.exs
+            </code></pre>
+            <pre><code data-trim data-noescape>
+defmodule TestProject.Mixfile do
+  use Mix.Project
+
+  def project do
+    [app: :test_project,
+     version: "0.0.1",
+     elixir: "~> 1.0",
+     elixirc_paths: elixirc_paths(Mix.env),
+     compilers: [:phoenix] ++ Mix.compilers,
+     build_embedded: Mix.env == :prod,
+     start_permanent: Mix.env == :prod,
+     deps: deps]
+  end
+
+  # Configuration for the OTP application
+  #
+  # Type `mix help compile.app` for more information
+  def application do
+    [mod: {TestProject, []},
+     applications: [:phoenix, :phoenix_html, :cowboy, :logger,
+                    :phoenix_ecto, :postgrex]]
+  end
+
+  # Specifies which paths to compile per environment
+  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
+  defp elixirc_paths(_),     do: ["lib", "web"]
+
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{:phoenix, path: "../..", override: true},
+     {:phoenix_ecto, "~> 1.1"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, "~> 2.1"},
+     {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+end
+            </code></pre>
+            <aside class="notes">
+              drop into test_project directory<br/>
+              look at mix.exs
+            </aside>
+          </section>
+
+          <section>
+            <pre><code data-trim data-noescape>
+
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{<mark>:phoenix, path: "../.."</mark>, override: true},
+     {:phoenix_ecto, "~> 1.1"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, "~> 2.1"},
+     {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+            </code></pre>
+            <aside class="notes">
+              relative path!
+            </aside>
+          </section>
+
+          <section>
+            <pre><code data-trim data-noescape>
+
+  # Specifies your project dependencies
+  #
+  # Type `mix help deps` for examples and options
+  defp deps do
+    [{:phoenix, path: "../..", <mark>override: true</mark>},
+     {:phoenix_ecto, "~> 1.1"},
+     {:postgrex, ">= 0.0.0"},
+     {:phoenix_html, "~> 2.1"},
+     {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:cowboy, "~> 1.0"}]
+  end
+            </code></pre>
+            <aside class="notes">
+              make sure no other dep sets the version to something else
+            </aside>
+
+          </section>
+
+          <section>
+            <pre><code data-trim>
+$ mix phoenix.server
+            </code></pre>
+          </section>
+          <section>
+              <img src="images/test_project_hello_phoenix.png" alt=""/>
+          </section>
+          <aside class="notes">
+            Now go reproduce your issue
+          </aside>
+        </section>
+
+        <section>
+          <section>
+            <h3>Elixir</h3>
+            <aside class="notes">
+              What if the issue wasn't in Phoenix, but was in the language?
+            </aside>
+          </section>
+
           <section>
             <h3>On master</h3>
-            <aside class="notes">
-              For Elixir
-            </aside>
           </section>
 
           <section>
@@ -282,7 +601,7 @@ $
             </code></pre>
           </section>
           <section>
-            <pre><code data-trim contenteditable>
+            <pre><code data-trim>
 $ cd elixir
 
 $ make clean test
@@ -290,7 +609,7 @@ $ make clean test
           </section>
 
           <section>
-            <pre><code data-trim contenteditable>
+            <pre><code data-trim>
 cd lib/elixir &amp;&amp; "/Users/wsmoak/projects/elixir/rebar" clean
 ==> elixir (clean)
 rm -rf ebin
@@ -642,7 +961,7 @@ $ export PATH=<mark>$ELIXIR_HOME</mark>:$PATH
           </section>
 
           <section>
-            <pre><code data-trim contenteditable>
+            <pre><code data-trim>
 $ which elixir
 
 /Users/wsmoak/projects/elixir/bin/elixir
@@ -650,7 +969,7 @@ $ which elixir
           </section>
 
           <section>
-            <pre><code data-trim contenteditable>
+            <pre><code data-trim>
 $ elixir -v
 
 Elixir 1.1.0-beta
@@ -662,6 +981,9 @@ Elixir 1.1.0-beta
 
           <section>
             <h2>Test a Release Candidate</h2>
+            <aside class="notes">
+            Slight detour...
+            </aside>
           </section>
 
           <section>
@@ -673,7 +995,7 @@ elixir-v1.1.0-rc.0
           </section>
 
           <section>
-            <pre><code data-trim>
+            <pre><code data-trim data-noescape>
 Cloning into 'elixir-v1.1.0-rc.0'...
 remote: Counting objects: 83050, done.
 remote: Compressing objects: 100% (113/113), done.
@@ -683,7 +1005,7 @@ Resolving deltas: 100% (46032/46032), done.
 Checking connectivity... done.
 Note: checking out '0e3c06b03149022b980e69872003d401c4788fea'.
 
-You are in 'detached HEAD' state. You can look around, make experimental
+<mark>You are in 'detached HEAD' state.</mark> You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
 state without impacting any branches by performing another checkout.
 
@@ -693,20 +1015,30 @@ do so (now or later) by using -b with the checkout command again. Example:
   git checkout -b &lt;new-branch-name>
 $
             </code></pre>
+            <aside class="notes">
+              ominous warning... can be safely ignored
+            </aside>
           </section>
+
           <section>
             <pre><code data-trim>
 $ cd elixir-v1.1.0-rc.0
 
 $ make clean test
             </code></pre>
+            <aside class="notes">
+              Same steps from here -- build and fix up environment<br/>
+              Report back either way!
+            </aside>
           </section>
-
         </section>
 
         <section>
           <section>
             <h3>Build the Docs</h3>
+            <aside class="notes">
+              If you're going to submit a patch for the language, surely you will have documentation!  Here's how to build it.
+            </aside>
           </section>
           <section>
             <img src="images/elixir_building_docs.png" alt=""/>
@@ -909,282 +1241,6 @@ $ open doc/elixir/index.html
 
         </section>
 
-        <section>
-
-          <section>
-            <h2>Phoenix</h2>
-          </section>
-
-          <section>
-            <h2>On master</h2>
-          </section>
-
-          <section>
-            <h2>Existing Project</h2>
-          </section>
-
-          <section>
-            <pre><code>
-  # Specifies your project dependencies
-  #
-  # Type `mix help deps` for examples and options
-  defp deps do
-    [{:phoenix, "~> 0.14"},
-     {:phoenix_ecto, "~> 0.5"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 1.1"},
-     {:phoenix_live_reload, "~> 0.4", only: :dev},
-     {:cowboy, "~> 1.0"}]
-  end
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-noescape>
-  # Specifies your project dependencies
-  #
-  # Type `mix help deps` for examples and options
-  defp deps do
-    [{:phoenix, <mark>github: "phoenixframework/phoenix"</mark>},
-     {:phoenix_ecto, "~> 0.5"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 1.1"},
-     {:phoenix_live_reload, "~> 0.4", only: :dev},
-     {:cowboy, "~> 1.0"}]
-  end
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code>
-$ mix deps.get
-            </code></pre>
-          </section>
-
-        </section>
-
-        <section>
-          <section>
-            <h3>New Project</h3>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ git clone https://github.com/phoenixframework/phoenix.git
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-Cloning into 'phoenix'...
-remote: Counting objects: 19702, done.
-remote: Compressing objects: 100% (49/49), done.
-remote: Total 19702 (delta 13), reused 0 (delta 0), pack-reused 19649
-Receiving objects: 100% (19702/19702), 3.65 MiB | 636.00 KiB/s, done.
-Resolving deltas: 100% (12877/12877), done.
-Checking connectivity... done.
-            </code></pre>
-          </section>
-
-          <section>
-            <h2>Phoenix Installer</h2>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ cd phoenix/installer
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ mix phoenix.new --version
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-Phoenix v1.0.2
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ rm ~/.mix/archives/phoenix_new*
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ mix phoenix.new test_project --dev
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim data-noescape>
-$ mix phoenix.new <mark>test_project</mark> --dev
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim data-noescape>
-$ mix phoenix.new test_project <mark>--dev</mark>
-            </code></pre>
-          </section>
-
-
-          <section id="phoenix_new_output">
-            <pre><code data-trim>
-* creating test_project/config/config.exs
-* creating test_project/config/dev.exs
-* creating test_project/config/prod.exs
-* creating test_project/config/prod.secret.exs
-* creating test_project/config/test.exs
-* creating test_project/lib/test_project.ex
-* creating test_project/lib/test_project/endpoint.ex
-* creating test_project/test/controllers/page_controller_test.exs
-* creating test_project/test/views/error_view_test.exs
-* creating test_project/test/views/page_view_test.exs
-* creating test_project/test/views/layout_view_test.exs
-* creating test_project/test/support/conn_case.ex
-* creating test_project/test/support/channel_case.ex
-* creating test_project/test/test_helper.exs
-* creating test_project/web/channels/user_socket.ex
-* creating test_project/web/controllers/page_controller.ex
-* creating test_project/web/templates/layout/app.html.eex
-* creating test_project/web/templates/page/index.html.eex
-* creating test_project/web/views/error_view.ex
-* creating test_project/web/views/layout_view.ex
-* creating test_project/web/views/page_view.ex
-* creating test_project/web/router.ex
-* creating test_project/web/web.ex
-* creating test_project/mix.exs
-* creating test_project/README.md
-* creating test_project/lib/test_project/repo.ex
-* creating test_project/test/support/model_case.ex
-* creating test_project/priv/repo/seeds.exs
-* creating test_project/.gitignore
-* creating test_project/brunch-config.js
-* creating test_project/package.json
-* creating test_project/web/static/css/app.css
-* creating test_project/web/static/js/app.js
-* creating test_project/web/static/js/socket.js
-* creating test_project/web/static/assets/robots.txt
-* creating test_project/web/static/assets/images/phoenix.png
-* creating test_project/web/static/assets/favicon.ico
-
-Fetch and install dependencies? [Yn] Y
-* running npm install &amp;&amp; node node_modules/brunch/bin/brunch build
-* running mix deps.get
-
-We are all set! Run your Phoenix application:
-
-    $ cd test_project
-    $ mix ecto.create
-    $ mix phoenix.server
-
-You can also run your app inside IEx (Interactive Elixir) as:
-
-    $ iex -S mix phoenix.server
-$
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ cd test_project
-
-$ cat mix.exs
-            </code></pre>
-            <pre><code data-trim data-noescape>
-defmodule TestProject.Mixfile do
-  use Mix.Project
-
-  def project do
-    [app: :test_project,
-     version: "0.0.1",
-     elixir: "~> 1.0",
-     elixirc_paths: elixirc_paths(Mix.env),
-     compilers: [:phoenix] ++ Mix.compilers,
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps]
-  end
-
-  # Configuration for the OTP application
-  #
-  # Type `mix help compile.app` for more information
-  def application do
-    [mod: {TestProject, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex]]
-  end
-
-  # Specifies which paths to compile per environment
-  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
-  defp elixirc_paths(_),     do: ["lib", "web"]
-
-  # Specifies your project dependencies
-  #
-  # Type `mix help deps` for examples and options
-  defp deps do
-    [{:phoenix, path: "../..", override: true},
-     {:phoenix_ecto, "~> 1.1"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.1"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:cowboy, "~> 1.0"}]
-  end
-end
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim data-noescape>
-
-  # Specifies your project dependencies
-  #
-  # Type `mix help deps` for examples and options
-  defp deps do
-    [{<mark>:phoenix, path: "../.."</mark>, override: true},
-     {:phoenix_ecto, "~> 1.1"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.1"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:cowboy, "~> 1.0"}]
-  end
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim data-noescape>
-
-  # Specifies your project dependencies
-  #
-  # Type `mix help deps` for examples and options
-  defp deps do
-    [{:phoenix, path: "../..", <mark>override: true</mark>},
-     {:phoenix_ecto, "~> 1.1"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.1"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:cowboy, "~> 1.0"}]
-  end
-            </code></pre>
-          </section>
-
-          <section>
-            <pre><code data-trim>
-$ mix phoenix.server
-            </code></pre>
-          </section>
-          <section>
-            <pre><code data-trim>
-TODO Screenshot of Hello Phoenix
-            </code></pre>
-          </section>
-
-        </section>
 
         <section>
         <section>
